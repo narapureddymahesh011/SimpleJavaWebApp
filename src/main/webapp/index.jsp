@@ -104,7 +104,8 @@
                 <input type="button" onclick="sendGet()" class="btn btn-primary" value="GET"/>
                 <input type="button" onclick="sendPost()" class="btn btn-success" value="POST"/>
                 <input type="button" onclick="sendPut()" class="btn btn-info" value="PUT"/>
-                <input type="button" onclick="sendDelete()" class="btn btn-danger" value="DELETE"/>
+                <input type="button" onclick="sendDelete()" class="btn btn-danger" value="DELETE"
+                       title="Push harder! Several times may not work :("/>
             </div>
 
         </div>
