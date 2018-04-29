@@ -86,7 +86,9 @@ public class LanguagesContainer implements ObjectContainer {
      */
     @Override
     public List<String> deleteOne() {
-        objectsCopy.remove(getRandomIndex());
+        if (!objectsCopy.isEmpty()) {
+            objectsCopy.remove(getRandomIndex());
+        }
         return objectsCopy;
     }
 
