@@ -101,10 +101,10 @@
             <br><br><hr><br>
 
             <div class="btn-group" style="margin:5px 0 10px 0;">
-                <button type="button" class="btn btn-primary">GET</button>
-                <button type="button" class="btn btn-success">POST</button>
-                <button type="button" class="btn btn-info">PUT</button>
-                <button type="button" class="btn btn-danger">DELETE</button>
+                <input type="button" onclick="sendGet()" class="btn btn-primary" value="GET"/>
+                <input type="button" onclick="sendPost()" class="btn btn-success" value="POST"/>
+                <input type="button" onclick="sendPut()" class="btn btn-info" value="PUT"/>
+                <input type="button" onclick="sendDelete()" class="btn btn-danger" value="DELETE"/>
             </div>
 
         </div>
@@ -114,6 +114,9 @@
 <!-- Bootstrap core JavaScript -->
 <script src="https://blackrockdigital.github.io/startbootstrap-bare/vendor/jquery/jquery.min.js"></script>
 <script src="https://blackrockdigital.github.io/startbootstrap-bare/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="http://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="js/send-functions.js" type="text/javascript"></script>
 
 </body>
 
