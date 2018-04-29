@@ -24,7 +24,7 @@ public class MainApp extends HttpServlet {
         req.setAttribute("collection", "true".equals(req.getParameter("update"))
                 ? collection.getOne()
                 : collection.getList());
-        req.setAttribute("aa", collection.getSize());
+        req.setAttribute("listSize", collection.getSize());
         RequestDispatcher rd = getServletContext().getRequestDispatcher("/index.jsp");
         rd.forward(req, resp);
     }

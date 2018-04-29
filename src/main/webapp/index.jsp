@@ -96,7 +96,7 @@
             <fmt:bundle basename="application">
                 <fmt:message key="count.total-collection-size" />
             </fmt:bundle>
-            <strong>${aa}</strong>
+            <strong>${listSize}</strong>
 
             <br><br><hr><br>
 
