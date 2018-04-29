@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import static java.util.Objects.isNull;
+
 public class MainApp extends HttpServlet {
 
     private final ObjectContainer collection;
@@ -52,10 +54,13 @@ public class MainApp extends HttpServlet {
     private void increaseHits(HttpServletRequest request, HttpServletResponse response) {
         Cookie[] cookies = request.getCookies();
 
-        int hits = 0;
+        if (isNull(cookies)) {
+            addCookie(response, totalHits.getAndIncrement());
+        }
+
         for (Cookie cookie : cookies) {
             if (cookie.getName().equals("HITS")) {
-                hits = Integer.parseInt(cookie.getValue());
+                int hits = Integer.parseInt(cookie.getValue());
                 if (totalHits.get() < hits) {
                     totalHits.getAndAdd(hits + 1);
                 } else {
@@ -63,10 +68,6 @@ public class MainApp extends HttpServlet {
                     response.addCookie(cookie);
                 }
             }
-        }
-
-        if (0 == hits) {
-            addCookie(response, totalHits.get());
         }
     }
 
