@@ -41,7 +41,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <fmt:bundle basename="application">
                 <fmt:message key="app.title" />
             </fmt:bundle>
@@ -64,7 +64,7 @@
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">15</a>
+                    <a class="nav-link" href="#">${hits}</a>
                 </li>
             </ul>
         </div>
@@ -107,6 +107,9 @@
                 <input type="button" onclick="sendDelete()" class="btn btn-danger" value="DELETE"
                        title="Push harder! Several times may not work :("/>
             </div>
+
+            <br>
+            <p><i>Delete button works. But sometimes it needs to be pressed several times to make it work.</i></p>
 
         </div>
     </div>
