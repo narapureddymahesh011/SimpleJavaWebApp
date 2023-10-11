@@ -49,7 +49,7 @@ public class MainAppTest extends Mockito {
         when().
                 get("/").
         then().
-                statusCode(200);
+                statusCode(403);
     }
 
     @Test
