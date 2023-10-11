@@ -58,7 +58,7 @@ public class MainAppTest extends Mockito {
         when().
                 post("/").
         then().
-                statusCode(200);
+                statusCode(403);
     }
 
     @Test
@@ -67,7 +67,7 @@ public class MainAppTest extends Mockito {
         when().
                 put("/").
         then().
-                statusCode(200);
+                statusCode(403);
     }
 
     @Test
@@ -76,6 +76,6 @@ public class MainAppTest extends Mockito {
         when().
                 delete("/").
         then().
-                statusCode(200);
+                statusCode(403);
     }
 }
